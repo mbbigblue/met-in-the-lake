@@ -11,7 +11,7 @@ pd.set_option('display.width', desired_width)
 
 pd.set_option('display.max_columns', 10)
 
-data = pd.read_csv("accidents/Accidents.csv", sep=',', error_bad_lines=False, index_col=False, dtype={})
+data = pd.read_csv("Accidents.csv", sep=',', error_bad_lines=False, index_col=False, dtype={})
 columns_names = data.columns.tolist()
 
 # print(columns_names)
