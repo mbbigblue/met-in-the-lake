@@ -1,6 +1,10 @@
 # Imports
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from sklearn import decomposition
+from sklearn.preprocessing import scale
+from sklearn.decomposition import PCA
 import seaborn as sns
 sns.set(font_scale=1.2, style="whitegrid")  # set styling preferences
 
