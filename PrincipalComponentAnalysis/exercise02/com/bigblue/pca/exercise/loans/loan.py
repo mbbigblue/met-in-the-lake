@@ -5,6 +5,8 @@ import seaborn as sns
 
 sns.set(font_scale=1.2, style="whitegrid")  # set styling preferences
 
+## Download loan.gz from https://www.dropbox.com/s/pvpvm4y9gygsas2/loan.csv.gz?dl=0 and extract to the same directory as loan.py
+
 ## 1. Load the loan data and take a look on them
 loan = pd.read_csv('loan.csv').sample(frac=.25)  # read the dataset and sample 25% of it
 loan.replace([np.inf, -np.inf], np.nan)  # convert infs to nans
@@ -28,8 +30,8 @@ print(columns_names)
 # plt.title('Correlation between different features')
 # plt.show()
 #
-# ## 4. Calculate eigenvalues
-# variance = covar_matrix.explained_variance_ratio_ #calculate variance ratios
+# ## 4. Calculate eigenvalues & eigenvectors
+# variance = covar_matrix.explained_variance_ratio_
 # cummulativeVariance=np.cumsum(np.round(covar_matrix.explained_variance_ratio_, decimals=3))
 # print(cummulativeVariance)
 #
@@ -55,7 +57,7 @@ print(columns_names)
 # plt.ylabel('Standardized Eigenvalues')
 # plt.show()
 #
-# ## 8. Taking 10 components
+# ## 7. Taking 10 components
 # pca = PCA(n_components=10)
 # pca.fit_transform(X)
 # print pca.explained_variance_ratio_
