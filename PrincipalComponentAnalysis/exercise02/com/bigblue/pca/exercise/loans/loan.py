@@ -2,7 +2,6 @@
 import numpy as np
 import pandas as pd
 import seaborn as sns
-
 sns.set(font_scale=1.2, style="whitegrid")  # set styling preferences
 
 ## Download loan.gz from https://www.dropbox.com/s/pvpvm4y9gygsas2/loan.csv.gz?dl=0 and extract to the same directory as loan.py
@@ -16,14 +15,14 @@ print(loan.head())
 columns_names = loan.columns.tolist()
 print(columns_names)
 
-# ## 2. Standaridize and calculate covariance matrix
+## 2. Standaridize and calculate covariance matrix
 # X = loan.values #convert the data into a numpy array
-# X = scale(X)
+# X = np.scale(X)
 # covar_matrix = PCA(n_components = 20) #take 20 features
 # covar_matrix.fit(X)
 # covariance = covar_matrix.get_covariance()
 # print(covariance)
-#
+
 # ## 3. Plot Covariance Heatmap
 # plt.figure(figsize=(20, 20))
 # sns.heatmap(covariance, vmax=1, square=False, annot=True, cmap=sns.color_palette("Blues", 20))
